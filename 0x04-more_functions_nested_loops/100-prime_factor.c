@@ -1,3 +1,8 @@
+/*
+ * File: 100-prime_factor.c
+ * Auth: Brennan D Baraban
+ */
+
 #include <stdio.h>
 
 /**
@@ -8,40 +13,24 @@
  */
 int main(void)
 {
-	long pf = 612852475143, div;
+	long prime = 612852475143, div;
 
-	while (div < (pf / 2))
+	while (div < (prime / 2))
 	{
-		if ((pf % 2) == 0)
+		if ((prime % 2) == 0)
 		{
-			pf /= 2;
+			prime /= 2;
 			continue;
 		}
 
-		for (div = 3; div < (pf / 2); div += 2)
+		for (div = 3; div < (prime / 2); div += 2)
 		{
-			if ((pf % div) == 0)
-				pf /= div;
+			if ((prime % div) == 0)
+				prime /= div;
 		}
 	}
 
-	printf("%ld\n", pf);
+	printf("%ld\n", prime);
 
 	return (0);
 }
-/* or
- * int main(void)
- * {
- * 	long int x = 612852475143;
- * 	long int p;
- *
- * 	for (p = 2; p < x; p++)
- * 	{
- * 		if (x % p == 0)
- * 		{
- * 			x = x / p;
- * 		}
- * 	}
- * 	printf("%ld\n", p);
- * 	return (0);
- * }
