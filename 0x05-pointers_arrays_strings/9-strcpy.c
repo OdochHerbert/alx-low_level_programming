@@ -1,9 +1,10 @@
 /*
  * File: 9-strcpy.c
- * Auth: Brennan D Baraban
+ * Auth: Odoch Herbert
  */
 
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strcpy - Copies a string pointed to by @src, including the
