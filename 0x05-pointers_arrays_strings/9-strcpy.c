@@ -23,5 +23,5 @@ char *_strcpy(char *dest, char *src)
 		index++;
 	}
 
-	return (dest);
+	return (0);
 }
